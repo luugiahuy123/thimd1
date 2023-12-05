@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, num) {
+        let index = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == num) {
+                index = i;
+                arr.splice(index, 1);
+            }
+        }
+        return arr;
+    }
+
+    let arr1 = [];
+    let lengOfArr = +parseInt(prompt("nhap do dai mang"));
+    for (let i = 0; i < lengOfArr; i++) {
+        arr1[i] = +parseInt(prompt("nhap phan tu mang"));
+    }
+    let number = +parseInt(prompt("nhap phan tu can xoa"));
+    let result = tryRemoveFromArray(arr1, number);
+    document.write(result);
+</script>
+</body>
+</html>

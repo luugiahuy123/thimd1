@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkStr(str1, str2) {
+        for (let i = 0; i < str1.length; i++) {
+            for (let j = 0; j < str2.length; j++) {
+                if (str1[i] === str2[j]) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+    }
+
+    let str3 = +prompt("nhập mang ký tự 1");
+    let str4 = +prompt("nhập mang ký tự 2");
+    let result = checkStr(str3, str4);
+    if (result) {
+        alert("chuôi nằm trong chuổi con lại");
+    } else {
+        alert(("chuổi 1 ko nằm trong chuổi còn lại"));
+    }
+</script>
+</body>
+</html>
